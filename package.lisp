@@ -1,0 +1,2 @@
+(defpackage #:hashtree
+  (:use #:cl))

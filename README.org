@@ -6,4 +6,8 @@ structures.
 ** Running it
 #+begin_src lisp
   ;; finish me
+  (push #p"~/dot-cons-tree/" asdf:*central-registry*)
+
+  (ql:quickload :hashtree)
+  (in-package #:hashtree)
 #+end_src
