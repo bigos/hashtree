@@ -4,6 +4,7 @@ This is attempt to crate a system where we can use hash tables for nested data
 structures.
 
 ** Running it
+
 #+begin_src lisp
   ;; finish me
   (push #p"~/dot-cons-tree/" asdf:*central-registry*)
@@ -11,3 +12,10 @@ structures.
   (ql:quickload :hashtree)
   (in-package #:hashtree)
 #+end_src
+
+** Adding to quicklisp
+
+#+begin_example
+cd ~/quicklisp/local-projects/
+ln -s  /home/jacek/Programming/Lisp/hashtree hashtree
+#+end_example
