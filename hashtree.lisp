@@ -16,7 +16,6 @@
          (typep (gethash :. hash) 'keyword)
          (typep (gethash :.. hash) 'hash-table))))
 
-(-> the-hash (keyword hash-table) hash-table)
 (defun the-hash (key current-hash)
   (cond
     ((equal :. key)
@@ -59,11 +58,9 @@
       hash
       (hash-get-path (the-hash (first keys) hash) (rest keys))))
 
-(-> hash-parent (hash-table) hash-table)
 (defun hash-parent (current-hash)
   (gethash :.. current-hash))
 
-(-> hash-current (hash-table) keyword)
 (defun hash-current (current-hash)
   (gethash :. current-hash))
 
