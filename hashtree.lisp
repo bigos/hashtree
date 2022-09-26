@@ -37,8 +37,8 @@
       (init-hash hash value key)))
   (setf (the-hash key hash) value))
 
-(defun hash-init-root (hash)
-  (init-hash nil hash :/))
+(defun hash-init-root ()
+  (init-hash nil (make-hash-table) :/))
 
 (defun hash-set-path (hash keys value)
   (if (null (cdr keys))
@@ -81,7 +81,7 @@
 (defun test-me ()
   (format t "~&Testing hashtree~%")
 
-  (let* ((root-hash (hash-init-root (make-hash-table)))
+  (let* ((root-hash (hash-init-root))
          (current-hash root-hash))
     (assert (typep current-hash 'hash-table))
 
