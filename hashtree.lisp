@@ -37,7 +37,7 @@
       (init-hash hash value key)))
   (setf (the-hash key hash) value))
 
-(defun hash-init-root ()
+(defun hash-init-root (&key (test 'equal))
   (init-hash nil (make-hash-table) :/))
 
 (defun hash-set-path (hash keys value)
