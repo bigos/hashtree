@@ -73,10 +73,11 @@
                           'parent
                           (gethash k table)))))
 
-(defmethod print-object ((obj hash-table)  stream)
-  (print-unreadable-object (obj stream :type t)
-    (format stream "~S"
-          (parent-hash-table-alist obj))))
+;;; this causes problems with big hashes
+;; (defmethod print-object ((obj hash-table)  stream)
+;;   (print-unreadable-object (obj stream :type t)
+;;     (format stream "~S"
+;;           (parent-hash-table-alist obj))))
 
 (defun test-me ()
   (format t "~&Testing hashtree~%")
