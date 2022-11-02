@@ -19,3 +19,6 @@ structures.
 cd ~/quicklisp/local-projects/
 ln -s  /home/jacek/Programming/Lisp/hashtree hashtree
 #+end_example
+
+** Alternatives to this project
+https://github.com/AccelerationNet/access
